@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    background-color: rgb(27, 27, 31);
+    margin: 0;
+}
+
+#header {
+    margin: 0px;
+    width: 100%;
+    /*background-color: rgb(3, 206, 3);*/
+    background: linear-gradient(to right, #64e386 45%, #296639 55%);
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#container {
+    padding: 20px;
+}
+
+#content {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+#left-sidebar {
+    width: 400px;
+    color: white;
+    border-right: 1px solid gray;
+    margin-right: 20px;
+    font-size: larger;
+}
+
+#right-sidebar {
+    width: 400px;
+    color: white;
+}
+
+#title {
+    color: rgb(31, 31, 31);
+    margin: 0;
+    font-weight: 600;
+}
+
+#tooltip {
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    padding: 2px 15px;
+}
+
+#title-country-comparison {
+    margin-left: 30px;
+}
+
+select {
+    width: 100px;
+    font-family: 'Raleway', sans-serif;
+    border-radius: 3px;
+    border: 1px black solid;
+    padding: 5px;
+    padding-right: 10px;
+    font-weight: 300;
+    
+}
+
+#select1 {
+    margin-left: 30px;
+    /* background-color: #64e386; */
+    background-color: white;
+}
+
+
+
+#select2 {
+    /* background-color: #296639; */
+    background-color: white;
+}
+
+
+    
+.popup-container {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+.dropdown-container {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+#variableDropdown {
+    padding: 5px;
+    font-size: 16px;
+    width: 250px;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 60%;
+}
+
+.close-button {
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#popupContainer1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#popup-content1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}

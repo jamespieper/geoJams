@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>geoJams</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="popupContainer1">
+            <div id="popup-content1">
+                <span class="close-btn" onclick="closePopup1()">x</span>
+                <h2>Welcome to geoJams</h2>
+                <p>The goal of this project is to find insights into the listening habits of various countries and cultures, and to help develop new perspectives on the way humans listen to music. Learn more in our <a href="processbook.html">process book</a>.</p>
+                <p>The visulalization contain a few parts: in the center, you'll find a world map. The countries that are colored are the ones that we have data for. When you click on a country, you'll be able to see the top 3 trending songs in the country as well as some summary statistics on the left. Click on the ⓘ button next to each statistic to learn more about them. By default the map is colored by the average energy of the country's top 50 songs, but you can change it do be colored by the average danceability as well.</p>
+            </div>
+        </div>
+        <div id="header">
+            <h1 id="title">geoJams</h1>
+        </div>
+        <div id="container">
+            <div id="content">
+                <div id="left-sidebar">
+                    <h2 id="left-sidebar-title">Select a country on the map to see summary statistics about its music</h2>
+                    <h4>The five summary statistics are an average of the top 50 songs from the selected country.</h4>
+                    <!-- Tempo -->
+                    <p id="tempo">Average Song Tempo <button class="info-button" onclick="showPopup('tempo')">ⓘ</button></p>
+                    <div id="tempo-graphic"></div>
+                
+                    <!-- Loudness -->
+                    <p id="loudness">Average Song Loudness <button class="info-button" onclick="showPopup('loudness')">ⓘ</button></p>
+                    <div id="loudness-graphic"></div>
+                
+                    <!-- Energy -->
+                    <p id="energy">Average Song Energy <button class="info-button" onclick="showPopup('energy')">ⓘ</button></p>
+                    <div id="energy-graphic"></div>
+                
+                    <!-- Danceability -->
+                    <p id="danceability">Average Song Danceability <button class="info-button" onclick="showPopup('danceability')">ⓘ</button></p>
+                    <div id="danceability-graphic"></div>
+                
+                    <!-- Instrumentalness -->
+                    <p id="instrumentalness">Average Song Instrumentalness <button class="info-button" onclick="showPopup('instrumentalness')">ⓘ</button></p>
+                    <div id="instrumentalness-graphic"></div>
+                </div>
+                <div>
+                    <div id="map-area"></div>
+                    <div id="legend"></div>
+                </div>
+
+                <div id="right-sidebar">
+                    <h1 id="title-country-comparison">Country Comparison</h1>
+                    <div id="comparison-area" class="parent">
+                        
+                        <span id="country1">
+                        </span>
+            
+                        <span id="country2">
+                        </span>
+                        
+                    </div>
+                        
+                    <div id="color-picker-area">
+                        <label for="variableDropdown">Color Countries By:</label>
+                        <select id="variableDropdown" onchange="changeColoration()">
+                            <option value="avg_energy">Average Song Energy</option>
+                            <option value="avg_danceability">Average Song Danceability</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="popup-container" class="popup-container">
+                    <div class="popup-content">
+                        <span class="close-button" onclick="closePopup()">x</span>
+                        <p id="popup-text"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center;">
+            <a style="color: white;" href="https://youtu.be/UpvFrkY3tE4">
+                Link to Project Screencast
+            </a>
+        </div>
+
+        <!-- Load JS libraries -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="js/topojson/topojson.min.js"></script>
+        <script type="text/javascript" src="js/d3-tip/index.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
+
+        <!-- Load data, create visualizations -->
+        <script src="js/main.js"></script>
+    </body>
+</html>
