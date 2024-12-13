@@ -3,8 +3,8 @@
 //var clientSecret = "4a2a67018d1c49719a2ad5972dcd4960";
 
 //Harry 2
- var clientID = "483fd7c8bb224de89a36fdd9cc534f5c";
- var clientSecret = "4de793144ecf4efcb3690005657d3d62";
+ var clientID = "9badf784cf3b4e8a90c9c512cc658fd1";
+ var clientSecret = "273d94ece31d4fa9b7a02bb40295ee5f";
 
 //Harry 3
 // var clientID = "d4cf2e583ccb434fa2438f4bf4d72bcf";
