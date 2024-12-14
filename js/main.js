@@ -819,8 +819,11 @@ function renderMap() {
     })
 }
 
+
+
+
 async function createVis() {
-    // Uses token and country list to get array of Top 50 country playlists and stores it in countrSongData
+    // Uses token and country list to get array of Top 50 country playlists and stores it in countrySongData
     await _getToken().then(async (token) => {
         _token = token;
         await d3.csv("data/countries.csv").then(async (countries) => {
