@@ -1,6 +1,5 @@
 # geojams
 
-James Pieper - j.p.pieper@wustl.edu - 486594
 <br>
 
 Website: https://csex57.github.io/geojams/
